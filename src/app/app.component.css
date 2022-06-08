@@ -1,0 +1,15 @@
+.nav-link{
+    font-size: large;
+}
+.nav-brand{
+    font-size: xx-large;
+}
+.navbar{
+    background-color: rgb(93, 4, 4);
+    color: white;
+}
+
+.search{
+    background-color: rgb(93,4,4);
+    color:white
+}

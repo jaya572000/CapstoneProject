@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark p-3">
+  <a class="navbar-brand" style="font-size: xx-large;"  href="#">NEWSAPP</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse " id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item active">
+        <a class="nav-link" style="font-size: x-large;" routerLink="/home" routerLinkActive="active">HOME</a>
+      </li>
+      <form class="form-inline d-flex ms-3">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm">
+        <button class="btn search btn-lg btn-dark my-2 my-sm-0" (click)="search()"><i class="bi bi-search"></i></button>
+      </form>
+      <li class="nav-item active">
+        <a class="nav-link" style="font-size: x-large;" *ngIf="userSerObj.getUserData().getValue()!==null" routerLink="/recomend" routerLinkActive="active">GLOBAL RECOMENDATIONS</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link"  style="font-size: x-large;" routerLink="/favorite"  *ngIf="userSerObj.getUserData().getValue()!==null" routerLinkActive="active">FAVOURITES</a>
+      </li>
+      <li class="nav-item" *ngIf="userSerObj.getUserData().getValue()==null">
+        <a class="nav-link"  style="font-size: x-large;" routerLink="/login"  routerLinkActive="active">LOGIN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="font-size: x-large;"  routerLink="/login" *ngIf="userSerObj.getUserData().getValue()!==null" (click)="userlogout()" routerLinkActive="active">LOGOUT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

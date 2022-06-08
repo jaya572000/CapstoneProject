@@ -1,0 +1,21 @@
+<div class="container mt-5">
+    <div class="cotainer-fluid">
+        <div class="card mb-3 mx-auto d-block h-100" style="max-width: 600px;">
+            <img src="{{book.urlToImage}}" alt="img" class="card-img p-3 mx-auto d-block" style="max-height: 450px;max-width: 300px;">
+    
+            <div class="card-body">
+                <p><span>Author: </span>{{book.author}}</p>
+                <p><span>Content:</span>{{book.content}}</p>
+                <p><span>Description:</span>{{book.description}}</p>
+                <p><span>Published AT: </span>{{book.publishedAt}}</p>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-success mt-3 mx-auto d-block" style="width: 190px; border-radius: 0.1cm;"
+                    (click)="addFavorites(book)">ADD TO
+                    FAVOURITE</button>
+                    <button class="btn btn-success mt-3 mx-auto d-block" style="width: 190px; border-radius: 0.1cm;"
+                    (click)="addToRecommendations(book)">RECOMMEND IT</button>
+            </div>
+        </div>
+    </div>
+</div>

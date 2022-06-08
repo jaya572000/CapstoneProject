@@ -1,0 +1,27 @@
+<div class="container  mt-5 p-3 ">
+            <form #formref (ngSubmit)="submit()" [formGroup]="userLogin" class="w-50 bg-light p-3 mx-auto">
+                <p class=" display-4 text-center m-4">Login</p>
+                <div>
+                    <label for="name">username</label>
+                    <input type="text" name="name" class="form-control " id="name" formControlName="username"
+                        required />
+                </div>
+
+                <div>
+                    <label for="password">password</label>
+                    <input type="password" name="password" class="form-control " formControlName="password" required />
+                </div>
+
+
+                <button class="button btn btn-primary d-block mx-auto mt-3" type="submit">Login</button>
+
+                <div>
+                    <p class=" text-center mt-3 text-info">NEW USER? CLICK THE SIGNUP</p>
+                    <button routerLink="/signup" class="btn btn-primary d-block mx-auto mt-3">
+                        SIGNUP
+                    </button>
+                </div>
+
+            </form>
+</div>
+<router-outlet></router-outlet>
