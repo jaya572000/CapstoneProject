@@ -1,0 +1,15 @@
+get http://localhost:5000/global/books
+
+###
+PUT http://localhost:5000/global/addrecommendations
+Content-Type: application/json
+
+{
+    "_id":"622990378f157b6222927ac5",
+"authorName":"lion king",
+"imgUrl":"https://th.bing.com/th/id/OIP.8f6zjnxnSLxUzcsWUXI2vQHaLX?pid=ImgDet&rs...",
+"bookTitle":"hello",
+"description":"Enzo knows he is different from other dogs: a philosopher with a nearl...",
+"language":"English",
+"genre":"Art"
+}
